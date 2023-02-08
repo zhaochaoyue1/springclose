@@ -1,0 +1,16 @@
+server:
+  port: 8084
+  shutdown: graceful
+  tomcat:
+    uri-encoding: utf-8
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: shutdown
